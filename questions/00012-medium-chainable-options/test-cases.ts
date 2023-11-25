@@ -1,5 +1,6 @@
 import type { Alike, Expect } from '@type-challenges/utils'
 
+
 declare const a: Chainable
 
 const result1 = a
@@ -19,6 +20,8 @@ const result3 = a
   // @ts-expect-error
   .option('name', 123)
   .get()
+
+const as = typeof result1
 
 type cases = [
   Expect<Alike<typeof result1, Expected1>>,
