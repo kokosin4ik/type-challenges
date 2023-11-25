@@ -1,1 +1,1 @@
-type Diff<O, O1> = any
+type Diff<O extends {}, O1 extends {}> = Omit<O & O1, keyof (O | O1)>
